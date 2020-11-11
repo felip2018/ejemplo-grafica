@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        <h2>Gráfica</h2>
+        <h:form>
+            <p:commandButton value="Graficar!" actionListener="#{productoBean.graficar()}" update="panel"/>
+            <h:panelGroup id="panel" layout="block">
+                <p:chart type="pie" model="#{productoBean.pieModel}" style="width: 400px;height: 400px;"
+                         rendered="#{productoBean.pieModel != null}"/>
+            </h:panelGroup>
+        </h:form>
+        
+        <p:separator/>
+        
+        <h:form enctype="multipart/form-data">
+            <p:outputLabel value="Ejercicio cargue masivo con JavaCSV"/><br/>
+            
+            <p:fileUpload value="#{usuarioBean.file}" mode="simple"/><br/>
+                                
+            <p:commandButton value="Realizar cargue" 
+                             ajax="false" 
+                             action="#{usuarioBean.realizarCargueUsuarios()}"/>
+        </h:form>
+    </h:body>
+</html>
+

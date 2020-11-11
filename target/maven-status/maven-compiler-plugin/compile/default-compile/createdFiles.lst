@@ -1,0 +1,11 @@
+com\grafica\main\model\Producto.class
+com\grafica\main\dao\ProductoFacade.class
+com\grafica\main\dao\ProductoFacadeLocal.class
+com\grafica\main\dao\UsuarioFacade.class
+com\grafica\main\model\Producto_.class
+com\grafica\main\model\Usuario.class
+com\grafica\main\model\Usuario_.class
+com\grafica\main\dao\AbstractFacade.class
+com\grafica\main\dao\UsuarioFacadeLocal.class
+com\grafica\main\beans\ProductoBean.class
+com\grafica\main\beans\UsuarioBean.class
